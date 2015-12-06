@@ -23,7 +23,7 @@
     },
     "require": {
         "php": ">=5.3",
-        "madmatt/saml2": "dev-ss-master",
+        "simplesamlphp/saml2": "dev-master#d701a128d0171b57911e643566b62834b8001a76",
         "robrichards/xmlseclibs": "~1.4.1",
         "whitehat101/apr1-md5": "~1.0"
     },
