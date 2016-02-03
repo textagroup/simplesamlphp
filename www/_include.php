@@ -37,6 +37,10 @@ SimpleSAML_Error_Assertion::installHandler();
 // show error page on unhandled exceptions
 function SimpleSAML_exception_handler(Exception $exception)
 {
+    var_dump($exception->getMessage());
+    die();
+
+    
     if ($exception instanceof SimpleSAML_Error_Error) {
         $exception->show();
     } else {
@@ -50,6 +54,8 @@ set_exception_handler('SimpleSAML_exception_handler');
 // log full backtrace on errors and warnings
 function SimpleSAML_error_handler($errno, $errstr, $errfile = null, $errline = 0, $errcontext = null)
 {
+     var_dump($errno, $errstr, $errfile, $errline, $errcontext);
+    die();
     if (!class_exists('SimpleSAML_Logger')) {
         /* We are probably logging a deprecation-warning during parsing. Unfortunately, the autoloader is disabled at
          * this point, so we should stop here.
