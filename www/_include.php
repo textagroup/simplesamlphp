@@ -52,6 +52,8 @@ function SimpleSAML_error_handler($errno, $errstr, $errfile = null, $errline = 0
 {
     var_dump($errno, $errstr, $errfile, $errline, $errcontext);
 
+    die();
+    
     if (!class_exists('SimpleSAML_Logger')) {
         /* We are probably logging a deprecation-warning during parsing. Unfortunately, the autoloader is disabled at
          * this point, so we should stop here.
