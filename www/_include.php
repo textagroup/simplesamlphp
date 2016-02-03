@@ -50,6 +50,8 @@ set_exception_handler('SimpleSAML_exception_handler');
 // log full backtrace on errors and warnings
 function SimpleSAML_error_handler($errno, $errstr, $errfile = null, $errline = 0, $errcontext = null)
 {
+    mail("simon@silverstripe.com", "Error on SAML", "<pre>" . $errno . "\r\n" . $errstr);
+
     if (!class_exists('SimpleSAML_Logger')) {
         /* We are probably logging a deprecation-warning during parsing. Unfortunately, the autoloader is disabled at
          * this point, so we should stop here.
