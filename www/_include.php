@@ -1,5 +1,7 @@
 <?php
 
+ini_set("default_socket_timeout", 30);
+
 /**
  * Disable magic quotes if they are enabled.
  */
